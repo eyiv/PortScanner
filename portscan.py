@@ -62,9 +62,6 @@ def portScan(host, ports, isRange, path):
     print("\nPort scan complete. Scan results can be found in: %s"% path)
 
 def writeToFile(hostName, closedList, openList, path):
-    if path == "scanresults.txt":
-        path = "scanresults-%s.txt"% hostName
-    
     with open(path, mode='w', encoding='utf-8') as file:
         file.write("Scan results for %s\n\n"% hostName)
 
